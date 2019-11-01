@@ -8,7 +8,7 @@ import { getPokemon } from '../services/pokemon-api.js';
 
 class PokedexApp extends Component {
     async onRender(dom) {
-        const headerSection = dom.querySelector('.header-div');
+        const headerSection = dom.querySelector('.header-div-sec');
         const header = new Header();
         headerSection.appendChild(header.renderDOM());
 
@@ -30,7 +30,7 @@ class PokedexApp extends Component {
     renderHTML() {
         return /*html*/ `
             <div>
-                <div class="header-div">
+                <div class="header-div-sec">
                 
                 </div>
                 <div class="the-rest">

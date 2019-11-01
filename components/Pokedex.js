@@ -15,9 +15,9 @@ class Pokedex extends Component {
 
     renderHTML() {
         return /*html*/ `
-            <div>
+            <main class="pokedex">
 
-            </div>
+            </main>
         `;
     }
 }
