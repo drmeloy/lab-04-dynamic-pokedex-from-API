@@ -212,8 +212,9 @@
         padding: 2%;
         border: 1px solid black;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+        justify-content: space-around;
+        align-items: center;
     }
 
     .entry {

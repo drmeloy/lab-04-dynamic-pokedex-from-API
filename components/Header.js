@@ -10,9 +10,9 @@ class Header extends Component {
             <img src="./assets/img/pokeball.png" alt="pokeball" />
         </header>
         <nav>
-            <a href="../index.html">Home</a>
+            <a href="./index.html">Home</a>
             <a href="https://www.youtube.com/watch?v=Offw-N3PkoA">About</a>
-            <a href="../pokedex.html">Pokemon</a>
+            <a href="./pokedex.html">Pokemon</a>
         </nav>
     </div>
         `;
