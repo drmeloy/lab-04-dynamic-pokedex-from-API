@@ -255,4 +255,18 @@
         border: 1px solid black;
     }
 
+    .page-selector {
+        display: flex;
+        flex-direction: row;
+        width: 15%;
+    }
+
+    .page-selector p {
+        margin: 0 3%;
+    }
+
+    .no-results-notification {
+        text-align: center;
+        padding: 1%;
+    }
 }
