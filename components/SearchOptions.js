@@ -32,8 +32,7 @@ class SearchOptions extends Component {
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
 
-            searchParams.set('type', formData.get('type'));
-            searchParams.set('s', formData.get('search'));
+            searchParams.set(formData.get('sort'), formData.get('search-bar'));
             searchParams.set('page', 1);
 
             window.location.hash = searchParams.toString();
@@ -50,7 +49,7 @@ class SearchOptions extends Component {
         <div class="sort">
         <p id="sort-title">SORT:</p>
             <label>
-                <input type="radio" name="sort" value="pokemon" id="sort1">NAME
+                <input type="radio" name="sort" value="pokemon" id="sort1" checked>NAME
             </label>
             <label>
                 <input type="radio" name="sort" value="type_1" id="sort2">TYPE
