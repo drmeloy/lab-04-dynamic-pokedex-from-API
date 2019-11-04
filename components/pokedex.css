@@ -1,0 +1,24 @@
+@media (max-width:640px){
+    .pokedex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        background: #D6DBB2
+    }
+}
+
+@media (min-width:641px){
+    .pokedex {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 2%;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+        justify-content: space-around;
+        align-items: center;
+        background: #D6DBB2;
+    }
+}
