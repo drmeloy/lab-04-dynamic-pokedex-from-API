@@ -72,7 +72,7 @@ class Pagination extends Component {
         <section class="pagination">
             <p>Showing <span class="number-shown"></span> of <span class="number-total"></span></p>
             <div class="page-selector">
-            <button class="prev-button" ${page === 1 ? 'disabled' : ''}>◀</button><p>Page <span class="page-shown"></span> of <span class="page-total"></span></p><button class="next-button" ${page === lastPage ? 'disabled' : ''}>▶</button>
+            <button class="prev-button" ${page === 1 ? 'disabled' : ''}>◀</button><p>Page <span class="page-shown">${page}</span> of <span class="page-total">${lastPage}</span></p><button class="next-button" ${page === lastPage ? 'disabled' : ''}>▶</button>
             </div>
         </section>
         `;

@@ -2,14 +2,14 @@ import Component from './Component.js';
 
 class SearchOptions extends Component {
     onRender(form){
-        const searchInput = form.querySelector('input[name=search-bar]');
+        const userInput = form.querySelector('input[name=search-bar]');
         const radios = form.querySelectorAll('input[name=sort]');
 
         function updateControls(){
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
 
-            searchInput.value = searchParams.get('s') || '';
+            userInput.value = searchParams.get('s') || '';
 
             const sort = searchParams.get('sort');
             if (sort){
@@ -50,10 +50,10 @@ class SearchOptions extends Component {
         <div class="sort">
         <p id="sort-title">SORT:</p>
             <label>
-                <input type="radio" name="sort" value="type" id="sort1">TYPE
+                <input type="radio" name="sort" value="pokemon" id="sort1">NAME
             </label>
             <label>
-                <input type="radio" name="sort" value="id" id="sort2">NUMBER
+                <input type="radio" name="sort" value="type_1" id="sort2">TYPE
             </label>
             <label>
                 <input type="radio" name="sort" value="attack" id="sort3">ATTACK

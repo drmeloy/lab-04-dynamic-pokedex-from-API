@@ -1,4 +1,4 @@
-const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
+const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex?';
 
 export async function getPokemon() {
     let queryString = window.location.hash.slice(1);

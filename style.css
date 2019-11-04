@@ -341,7 +341,7 @@
     .page-selector {
         display: flex;
         flex-direction: row;
-        width: 15%;
+        width: 20%;
     }
 
     .page-selector p {

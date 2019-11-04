@@ -25,7 +25,6 @@ class PokedexApp extends Component {
         async function loadPokedex() {
             const response = await getPokemon();
             const pokemon = response.results;
-            console.log(pokemon);
             const totalResults = response.count;
             pokedex.update({ pokemon: pokemon });
             pagination.update({ totalResults: totalResults });
