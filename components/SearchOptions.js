@@ -9,7 +9,7 @@ class SearchOptions extends Component {
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
 
-            userInput.value = searchParams.get('s') || '';
+            userInput.value = searchParams.get('pokemon') || searchParams.get('type_1') || searchParams.get('attack') || searchParams.get('defense') || '';
 
             const sort = searchParams.get('sort');
             if (sort){
@@ -29,7 +29,7 @@ class SearchOptions extends Component {
             event.preventDefault();
             const formData = new FormData(form);
 
-            const queryString = window.location.hash.slice(1);
+            const queryString = '';
             const searchParams = new URLSearchParams(queryString);
 
             searchParams.set(formData.get('sort'), formData.get('search-bar'));
