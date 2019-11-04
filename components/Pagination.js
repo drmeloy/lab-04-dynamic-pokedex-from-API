@@ -46,7 +46,6 @@ class Pagination extends Component {
     }
 
     renderHTML() {
-        const perPage = 20;
         const totalResults = this.props.totalResults;
         const queryString = window.location.hash.slice(1);
         const searchParams = new URLSearchParams(queryString);
@@ -66,11 +65,15 @@ class Pagination extends Component {
             `;
         }
 
+
+        const perPage = 20;
         const lastPage = Math.ceil(totalResults / perPage);
+        const start = (page * perPage) - (perPage - 1);
+        const end = Math.min(start + perPage - 1, totalResults);
 
         return /*html*/ `
         <section class="pagination">
-            <p>Showing <span class="number-shown"></span> of <span class="number-total"></span></p>
+            <p>Showing <span class="number-shown">${start} - ${end}</span> of <span class="number-total">${totalResults}</span></p>
             <div class="page-selector">
             <button class="prev-button" ${page === 1 ? 'disabled' : ''}>◀</button><p>Page <span class="page-shown">${page}</span> of <span class="page-total">${lastPage}</span></p><button class="next-button" ${page === lastPage ? 'disabled' : ''}>▶</button>
             </div>
