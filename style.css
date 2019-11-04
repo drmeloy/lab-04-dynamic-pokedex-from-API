@@ -132,6 +132,7 @@
     html, body{
         width: 90vw;
         margin: 0 auto;
+        background: wheat;
     }
 
     * {
@@ -154,6 +155,7 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        background: white;
     }
 
     header h1 {
@@ -169,6 +171,7 @@
         flex-direction: column;
         justify-content: space-around;
         font-size: 2rem;
+        background: #8DA1B9;
     }
 
     .the-rest {
@@ -186,6 +189,7 @@
         padding: 3%;
         line-height: 2rem;
         border: 1px solid black;
+        background: #A1B5D8;
     }
 
     .sort {
@@ -204,6 +208,8 @@
         justify-content: space-around;
         padding: 1%;
         border: 1px solid black;
+        background: #331832;
+        color: white;
     }
 
     .pokedex {
@@ -215,6 +221,7 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
         justify-content: space-around;
         align-items: center;
+        background: #D6DBB2;
     }
 
     .entry {
@@ -226,6 +233,80 @@
         padding: 2%;
         border: 1px solid black;
         margin: 3%;
+        background: #CD533B;
+        border-radius: 5px;
+    }
+
+    .entry.grass {
+        background: green;
+    }
+
+    .entry.fire {
+        background: #ec2902;
+    }
+
+    .entry.water {
+        background: #03a9f4;
+    }
+
+    .entry.bug {
+        background: brown;
+    }
+
+    .entry.normal {
+        background: grey;
+    }
+
+    .entry.electric {
+        background: yellow;
+    }
+
+    .entry.dark {
+        background: black;
+    }
+
+    .entry.dragon {
+        background: skyblue;
+    }
+
+    .entry.fairy {
+        background: pink;
+    }
+
+    .entry.fighting {
+        background: slategray;
+    }
+
+    .entry.flying {
+        background: white;
+    }
+
+    .entry.ghost {
+        background: purple;
+    }
+
+    .entry.ground {
+        background: rosybrown;
+    }
+
+    .entry.ice {
+        background: lightblue;
+    }
+
+    .entry.poison {
+        background: lightgreen;
+    }
+
+    .entry.psychic {
+        background: darkgoldenrod;
+    }
+
+    .entry.rock {
+        background: darkred;
+    }
+
+    .entry.steel {
+        background: lightslategray;
     }
 
     .description, .poke-pic, .info {
@@ -233,6 +314,8 @@
         padding: 2%;
         margin: 1%;
         font-size: .8rem;
+        background: white;
+        border-radius: 5px;
     }
 
     .description {

@@ -4,7 +4,7 @@ import Entry from './Entry.js';
 class Pokedex extends Component {
     onRender(dom) {
         const pokemon = this.props.pokemon;
-
+        console.log(pokemon);
         pokemon.forEach(poke => {
             const props = { poke };
             const entry = new Entry(props);

@@ -5,7 +5,7 @@ class Entry extends Component {
         const poke = this.props.poke;
 
         return /*html*/ `
-        <figure class="entry">
+        <figure class="entry ${poke.type_1}">
             <div class="info">
                 <p>Name: ${poke.pokemon}</p>
                 <p>Number: ${poke.id}</p>

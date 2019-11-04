@@ -1,20 +1,59 @@
 import Component from './Component.js';
 
 class SearchOptions extends Component {
+    onRender(form){
+        const searchInput = form.querySelector('input[name=search-bar]');
+        const radios = form.querySelectorAll('input[name=sort]');
+
+        function updateControls(){
+            const queryString = window.location.hash.slice(1);
+            const searchParams = new URLSearchParams(queryString);
+
+            searchInput.value = searchParams.get('s') || '';
+
+            const sort = searchParams.get('sort');
+            if (sort){
+                radios.forEach(radio => {
+                    radio.checked = radio.value === sort;
+                });
+            }
+        }
+
+        updateControls();
+
+        window.addEventListener('hashchange', () => {
+            updateControls();
+        });
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            const formData = new FormData(form);
+
+            const queryString = window.location.hash.slice(1);
+            const searchParams = new URLSearchParams(queryString);
+
+            searchParams.set('type', formData.get('type'));
+            searchParams.set('s', formData.get('search'));
+            searchParams.set('page', 1);
+
+            window.location.hash = searchParams.toString();
+        });
+    }
+
     renderHTML() {
         return /*html*/ `
-        <section class="search-and-sort">
-        <label class="search-bar">
-            <p>SEARCH:</p>
-            <input type="text" />
-        </label>
+        <form class="search-and-sort">
+            <label for="search-bar">
+            SEARCH:
+            </label>
+            <p><input type="text" id="search-bar" name="search-bar" /></p>
         <div class="sort">
         <p id="sort-title">SORT:</p>
             <label>
                 <input type="radio" name="sort" value="type" id="sort1">TYPE
             </label>
             <label>
-                <input type="radio" name="sort" value="number" id="sort2">NUMBER
+                <input type="radio" name="sort" value="id" id="sort2">NUMBER
             </label>
             <label>
                 <input type="radio" name="sort" value="attack" id="sort3">ATTACK
@@ -23,7 +62,8 @@ class SearchOptions extends Component {
                 <input type="radio" name="sort" value="defense" id="sort4">DEFENSE
             </label>
         </div>
-    </section>
+        <p><button type='submit'>SEARCH</button></p>
+    </form>
         `;
     }
 }
