@@ -1,0 +1,45 @@
+@media (max-width:640px){
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header img {
+        width: 16%;
+    }
+
+    nav {
+        background: wheat;
+    }
+}
+
+@media (min-width:641px){
+    .header-div {
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background: white;
+    }
+
+    header h1 {
+        font-size: 5rem;
+    }
+
+    header img {
+        width: 16%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 2rem;
+        background: #A1B5D8;
+    }
+}

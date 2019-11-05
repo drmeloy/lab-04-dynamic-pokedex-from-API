@@ -1,0 +1,222 @@
+@media (max-width:640px){
+    .entry {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        border: 1px solid black;
+        margin: 3%;
+        border-radius: 5px;
+    }
+
+    .description, .poke-pic, .info {
+        border: 1px solid black;
+        padding: 2%;
+        margin: 1%;
+        font-size: .8rem;
+    }
+
+    .description {
+        grid-column: 1/3;
+        width: 100%;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .poke-pic {
+        width: 100%;
+        border: 1px solid black;
+        background: white;
+        border-radius: 5px;;
+    }
+
+    .info {
+        line-height: 1.15rem;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .entry.grass {
+        background: green;
+    }
+
+    .entry.fire {
+        background: #ec2902;
+    }
+
+    .entry.water {
+        background: #03a9f4;
+    }
+
+    .entry.bug {
+        background: brown;
+    }
+
+    .entry.normal {
+        background: grey;
+    }
+
+    .entry.electric {
+        background: yellow;
+    }
+
+    .entry.dark {
+        background: black;
+    }
+
+    .entry.dragon {
+        background: skyblue;
+    }
+
+    .entry.fairy {
+        background: pink;
+    }
+
+    .entry.fighting {
+        background: slategray;
+    }
+
+    .entry.flying {
+        background: white;
+    }
+
+    .entry.ghost {
+        background: purple;
+    }
+
+    .entry.ground {
+        background: rosybrown;
+    }
+
+    .entry.ice {
+        background: lightblue;
+    }
+
+    .entry.poison {
+        background: lightgreen;
+    }
+
+    .entry.psychic {
+        background: darkgoldenrod;
+    }
+
+    .entry.rock {
+        background: darkred;
+    }
+
+    .entry.steel {
+        background: lightslategray;
+    }
+}
+
+@media (min-width:641px){
+    .entry {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        border: 1px solid black;
+        margin: 3%;
+        background: #CD533B;
+        border-radius: 5px;
+    }
+
+    .entry.grass {
+        background: green;
+    }
+
+    .entry.fire {
+        background: #ec2902;
+    }
+
+    .entry.water {
+        background: #03a9f4;
+    }
+
+    .entry.bug {
+        background: brown;
+    }
+
+    .entry.normal {
+        background: grey;
+    }
+
+    .entry.electric {
+        background: yellow;
+    }
+
+    .entry.dark {
+        background: black;
+    }
+
+    .entry.dragon {
+        background: skyblue;
+    }
+
+    .entry.fairy {
+        background: pink;
+    }
+
+    .entry.fighting {
+        background: slategray;
+    }
+
+    .entry.flying {
+        background: white;
+    }
+
+    .entry.ghost {
+        background: purple;
+    }
+
+    .entry.ground {
+        background: rosybrown;
+    }
+
+    .entry.ice {
+        background: lightblue;
+    }
+
+    .entry.poison {
+        background: lightgreen;
+    }
+
+    .entry.psychic {
+        background: darkgoldenrod;
+    }
+
+    .entry.rock {
+        background: darkred;
+    }
+
+    .entry.steel {
+        background: lightslategray;
+    }
+
+    .description, .poke-pic, .info {
+        border: 1px solid black;
+        padding: 2%;
+        margin: 1%;
+        font-size: .8rem;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .description {
+        grid-column: 1/3;
+        width: 100%;
+    }
+
+    .poke-pic {
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .info {
+        line-height: 1.15rem;
+    }
+}

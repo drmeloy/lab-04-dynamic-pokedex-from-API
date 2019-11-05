@@ -16,15 +16,25 @@ class PokedexApp extends Component {
         const searchOptions = new SearchOptions();
         theRest.appendChild(searchOptions.renderDOM());
 
-        const pagination = new Pagination();
+        const pagination = new Pagination({ totalResults: 0 });
         theRest.appendChild(pagination.renderDOM());
 
         const pokedex = new Pokedex({ pokemon: [] });
         theRest.appendChild(pokedex.renderDOM());
 
-        const response = await getPokemon();
-        const pokemon = response.results;
-        pokedex.update({ pokemon: pokemon });
+        async function loadPokedex() {
+            const response = await getPokemon();
+            const pokemon = response.results;
+            const totalResults = response.count;
+            pokedex.update({ pokemon: pokemon });
+            pagination.update({ totalResults: totalResults });
+        }
+
+        loadPokedex();
+
+        window.addEventListener('hashchange', () => {
+            loadPokedex();
+        });
     }
 
     renderHTML() {

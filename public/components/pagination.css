@@ -1,0 +1,49 @@
+@media (max-width:640px){
+    .pagination {
+        font-size: .6rem;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        padding-top: 0;
+        background: #331832;
+        color: white;
+    }
+
+    .page-selector {
+        display: flex;
+        align-items: inherit;
+        width: 32%;
+    }
+
+    .page-selector p {
+        margin: 0 3%;
+    }
+}
+
+@media (min-width:641px){
+    .pagination {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: space-around;
+        padding: 1%;
+        border: 1px solid black;
+        background: #331832;
+        color: white;
+    }
+
+    .page-selector {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+    }
+
+    .page-selector p {
+        margin: 0 3%;
+    }
+
+    .no-results-notification {
+        text-align: center;
+        padding: 1%;
+    }
+}

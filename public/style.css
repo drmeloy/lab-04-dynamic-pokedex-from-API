@@ -1,0 +1,42 @@
+@media (max-width:640px){
+    html, body{
+        width: 100vw
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    header, nav, .pagination, footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid black;
+        padding: 2%;
+    }
+}
+
+@media (min-width:641px){
+    html, body{
+        width: 90vw;
+        margin: 0 auto;
+        background: wheat;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    nav, header {
+        border: 1px solid black;
+        padding: 2%;
+    }
+
+    .the-rest {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 4fr;
+        grid-template-rows: auto;
+    }
+}
